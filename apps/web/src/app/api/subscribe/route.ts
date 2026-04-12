@@ -53,7 +53,15 @@ export async function POST(request: Request) {
 
     // 2. Body Parsing & Validation
     const body = await request.json();
-    const { email } = body;
+    const { email, bot_field } = body;
+
+    // Honeypot Bot Trap: If the hidden 'bot_field' is filled, immediately return a fake success.
+    if (bot_field) {
+      return NextResponse.json({
+        message: 'Successfully authenticated into the PIS Labs ecosystem.',
+        status: 'success'
+      }, { status: 201 });
+    }
 
     // Basic server-side validation
     if (!email || !email.includes('@')) {

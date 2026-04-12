@@ -32,9 +32,9 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Model', href: '#model' },
-    { name: 'Ventures', href: '#ventures' },
-    { name: 'Philosophy', href: '#research' },
+    { name: 'Model', href: '/#model' },
+    { name: 'Ventures', href: '/#ventures' },
+    { name: 'Philosophy', href: '/#research' },
   ];
 
   return (

@@ -63,6 +63,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "PIS Labs",
+              "url": "https://pislabs.com",
+              "logo": "https://pislabs.com/og-image.jpg",
+              "description": "Applied AI Venture Studio building scalable digital systems by combining technical authority, production-grade AI development, and community-driven distribution."
+            })
+          }}
+        />
         {/* Google Analytics with Consent Mode v2 — default denied until user accepts */}
         <Script
           id="gtag-consent-default"

@@ -5,6 +5,7 @@ import { Mail, CheckCircle2, Loader2, MessageCircle } from 'lucide-react';
 
 export const CTA = () => {
   const [email, setEmail] = useState('');
+  const [honeypot, setHoneypot] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -15,7 +16,7 @@ export const CTA = () => {
       const response = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, bot_field: honeypot }),
       });
 
       if (!response.ok) throw new Error('Submission failed');
@@ -38,7 +39,7 @@ export const CTA = () => {
           Join the Ecosystem
         </h2>
         
-        <p className="text-zinc-600 dark:text-zinc-400 text-lg mb-10 max-w-lg mx-auto z-10 leading-relaxed transition-colors duration-300">
+        <p className="text-zinc-600 dark:text-zinc-300 text-lg mb-10 max-w-lg mx-auto z-10 leading-relaxed transition-colors duration-300">
           Get early access to our production-grade MVPs, read our applied AI research, and help shape the tools we build.
         </p>
         
@@ -55,6 +56,17 @@ export const CTA = () => {
                 <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
                   <Mail className="h-6 w-6 text-zinc-400 dark:text-zinc-400 transition-colors duration-300" />
                 </div>
+                {/* Honeypot field - visually hidden to trap bots */}
+                <input
+                  type="text"
+                  name="bot_field"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                  className="absolute w-0 h-0 opacity-0 pointer-events-none"
+                  aria-hidden="true"
+                />
                 <input 
                   type="email" 
                   value={email}

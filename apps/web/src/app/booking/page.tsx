@@ -38,8 +38,18 @@ export default function BookingPage() {
               }}
             />
           ) : (
-            <div className="w-full h-full min-h-[700px] flex items-center justify-center animate-pulse">
-              <span className="text-zinc-500 font-medium">Loading Calendar...</span>
+            <div className="w-full h-full min-h-[700px] flex flex-col items-center justify-start p-12 bg-white dark:bg-[#09090b] animate-pulse">
+              <div className="w-24 h-24 bg-zinc-200 dark:bg-zinc-800 rounded-full mb-6"></div>
+              <div className="w-48 h-6 bg-zinc-200 dark:bg-zinc-800 rounded-md mb-3"></div>
+              <div className="w-32 h-4 bg-zinc-200 dark:bg-zinc-800 rounded-md mb-10"></div>
+              <div className="w-full max-w-3xl border border-zinc-200 dark:border-zinc-800 rounded-2xl flex p-6 gap-6">
+                 <div className="w-1/3 flex flex-col gap-4">
+                    <div className="w-full h-8 bg-zinc-200 dark:bg-zinc-800 rounded-md"></div>
+                    <div className="w-3/4 h-4 bg-zinc-200 dark:bg-zinc-800 rounded-md"></div>
+                    <div className="w-1/2 h-4 bg-zinc-200 dark:bg-zinc-800 rounded-md"></div>
+                 </div>
+                 <div className="w-2/3 h-96 bg-zinc-200 dark:bg-zinc-800 rounded-xl"></div>
+              </div>
             </div>
           )}
         </div>

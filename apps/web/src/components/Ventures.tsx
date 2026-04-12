@@ -62,7 +62,7 @@ export const Ventures = async () => {
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 mb-4 transition-colors duration-300">
               Current Ventures
             </h2>
-            <p className="text-zinc-600 dark:text-zinc-400 max-w-xl leading-relaxed transition-colors duration-300">
+            <p className="text-zinc-600 dark:text-zinc-300 max-w-xl leading-relaxed transition-colors duration-300">
               We build SaaS products, financial infrastructure tools, and AI-powered systems optimized for real-world utility.
             </p>
           </div>
@@ -87,7 +87,7 @@ export const Ventures = async () => {
                     {venture.stage}
                   </div>
                   <h3 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 mb-3 transition-colors duration-300">{venture.title}</h3>
-                  <p className="text-zinc-600 dark:text-zinc-400 mb-8 leading-relaxed transition-colors duration-300">
+                  <p className="text-zinc-600 dark:text-zinc-300 mb-8 leading-relaxed transition-colors duration-300">
                     {venture.description}
                   </p>
                   

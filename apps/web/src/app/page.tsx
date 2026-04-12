@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
-import dynamic from 'next/dynamic';
-
-const TheModel = dynamic(() => import('@/components/TheModel').then((mod) => mod.TheModel));
-const Ventures = dynamic(() => import('@/components/Ventures').then((mod) => mod.Ventures));
-const FounderPhilosophy = dynamic(() => import('@/components/FounderPhilosophy').then((mod) => mod.FounderPhilosophy));
-const CTA = dynamic(() => import('@/components/CTA').then((mod) => mod.CTA));
-const Footer = dynamic(() => import('@/components/Footer').then((mod) => mod.Footer));
+import { TheModel } from '@/components/TheModel';
+import { Ventures } from '@/components/Ventures';
+import { FounderPhilosophy } from '@/components/FounderPhilosophy';
+import { CTA } from '@/components/CTA';
+import { Footer } from '@/components/Footer';
 
 export default function Page() {
   return (
@@ -16,7 +14,9 @@ export default function Page() {
       <main className="flex flex-col items-center justify-start w-full transition-colors duration-300">
         <Hero />
         <TheModel />
-        <Ventures />
+        <Suspense fallback={<div className="w-full py-24 px-6 flex justify-center"><div className="w-8 h-8 border-4 border-zinc-200 dark:border-zinc-800 border-t-zinc-600 dark:border-t-zinc-400 rounded-full animate-spin"></div></div>}>
+          <Ventures />
+        </Suspense>
         <FounderPhilosophy />
         <CTA />
         <Footer />
