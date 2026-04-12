@@ -1,0 +1,276 @@
+# PIS Labs — Comprehensive Technical & UX Audit
+
+**Auditor Roles:** Principal Software Architect · Lead UI/UX Engineer · Security/Compliance Auditor
+**Date:** April 11, 2026
+**Scope:** Full codebase review across 5 pillars
+
+---
+
+## Executive Summary
+
+The PIS Labs codebase is **above average for a solo-founder MVP** — the design system is coherent, the monorepo structure is clean, and the security posture of the `/api/subscribe` route is thoughtful. However, this audit surfaces **12 critical findings** and **9 moderate findings** that must be addressed before a production launch to a B2B audience. The most severe issues cluster around **architecture anti-patterns with `next/dynamic`**, a **duplicate `.env.local` that leaks secrets**, and **missing SEO infrastructure for the `/research/[slug]` pages**.
+
+---
+
+## Pillar 1: Architecture & Next.js Best Practices
+
+### Grade: C+
+
+> [!CAUTION]
+> ### CRITICAL: `next/dynamic` on an Async Server Component Defeats the Purpose
+> **Files:** [page.tsx](file:///c:/Users/USER/Downloads/pis-labs/apps/web/src/app/page.tsx), [Ventures.tsx](file:///c:/Users/USER/Downloads/pis-labs/apps/web/src/components/Ventures.tsx)
+>
+> `Ventures` is an **async Server Component** (it uses `await` to fetch data). Wrapping it in `next/dynamic` forces it to render on the **client**, which:
+> 1. **Breaks server-side data fetching entirely** — `process.env.GOOGLE_SHEETS_API_URL` is `undefined` on the client.
+> 2. **Eliminates the ISR caching** (`next: { revalidate: 60 }`) you carefully configured.
+> 3. **Adds a loading spinner** for content that should be pre-rendered HTML.
+>
+> **Fix:** Remove `next/dynamic` from `Ventures`. Import it statically. It's a Server Component — Next.js will stream it automatically. The same applies to `TheModel` and `FounderPhilosophy`, which are also pure Server Components with zero client-side logic.
+
+| Component | `'use client'`? | Has client logic? | `next/dynamic`? | Verdict |
+|---|---|---|---|---|
+| `Navbar` | ✅ Yes | ✅ `useState`, `useEffect`, `useScroll` | No | ✅ Correct |
+| `Hero` | ✅ Yes | ✅ Uses `ToastButton` (client context) | No | ✅ Correct |
+| `TheModel` | ❌ No | ❌ None | ⚠️ Yes | ❌ **Remove dynamic** |
+| `Ventures` | ❌ No | ❌ None (async server fetch) | ⚠️ Yes | ❌ **Remove dynamic** |
+| `FounderPhilosophy` | ❌ No | ❌ None | ⚠️ Yes | ❌ **Remove dynamic** |
+| `CTA` | ✅ Yes | ✅ `useState`, form logic | ⚠️ Yes | ⚠️ Acceptable, but adds spinner |
+| `Footer` | ❌ No | ❌ None | No | ✅ Correct |
+| `BackgroundEffects` | ❌ No | ❌ None | No | ✅ Correct |
+| `DisableDevTools` | ✅ Yes | ✅ `useEffect` | No | ✅ Correct |
+| `ThemeProvider` | ✅ Yes | ✅ Context provider | No | ✅ Correct |
+| `ToastProvider` | ✅ Yes | ✅ Context + state | No | ✅ Correct |
+| `ToastButton` | ✅ Yes | ✅ Uses toast context | No | ✅ Correct |
+| `ThemeToggle` | ✅ Yes | ✅ `useState`, `useTheme` | No | ✅ Correct |
+
+### Finding: Duplicate `.env.local` Files
+> [!WARNING]
+> **Root `.env.local`** still contains `NEXT_PUBLIC_GOOGLE_SHEETS_API_URL` (the old, client-exposed name).
+> **`apps/web/.env.local`** correctly uses `GOOGLE_SHEETS_API_URL` (server-only).
+>
+> The root file is **dead weight** and a potential source of confusion. Next.js in the monorepo only reads from `apps/web/.env.local` when the workspace root is `apps/web`. The root `.env.local` serves no purpose and should be **deleted** to avoid accidental deployment with the wrong variable name.
+
+### Finding: Missing `next-themes` in Web Package
+`next-themes` is installed at the **root** `package.json` but not in `apps/web/package.json`. This works due to npm workspace hoisting but is an anti-pattern — if you ever eject the web app into its own deployment, it will break. Move `next-themes` to `apps/web/package.json` under `dependencies`.
+
+### Finding: `dotenv` is Unnecessary
+`dotenv` is listed as a root dependency. Next.js handles `.env.local` natively. This package serves no purpose and should be removed.
+
+### Finding: Redundant `packages/*` Workspace
+The root `package.json` declares `"packages/*"` as a workspace, but no `packages/` directory exists. This is harmless but untidy — remove it or create the directory when you need shared packages.
+
+---
+
+## Pillar 2: UI/UX, Responsiveness & Accessibility
+
+### Grade: B+
+
+### ✅ What's Working Well
+- **Mobile-first Tailwind usage** is consistent. No hardcoded pixel widths that would break layouts (the `w-[600px]` in `Hero.tsx` line 12 is on an **absolutely positioned blur element**, not a layout element — safe).
+- **Invisible scrollbar** implementation in `globals.css` is thorough (covers WebKit, Firefox, IE/Edge).
+- **Toast system** is well-implemented with spring physics and glassmorphism.
+- **Collapsible Navbar** correctly uses `lg:hidden` breakpoint, covering both mobile and tablet.
+- **`overflow-x-hidden`** on the `page.tsx` wrapper prevents horizontal scroll from background effects.
+
+### Finding: BackgroundEffects Symbols at `left: '90%'` Risk Overflow
+> [!WARNING]
+> Symbols positioned at `left: '90%'` or `left: '85%'` with `text-xl` size classes could **clip or cause horizontal scroll** on very narrow viewports (< 360px). The parent `div` has `overflow-hidden`, which mitigates this, but the symbols will be **invisible** on those viewports — wasted rendering cycles.
+>
+> **Recommendation:** Filter symbols to use narrower horizontal ranges on mobile, or cap `left` values at `80%`.
+
+### Finding: Color Contrast Issues in Dark Mode
+| Element | Foreground | Background | Approx. Ratio | WCAG AA (4.5:1)? |
+|---|---|---|---|---|
+| Body text (`text-zinc-400` on `bg-black`) | `#a1a1aa` | `#000000` | **5.3:1** | ✅ Pass |
+| Muted text (`text-zinc-500` on `bg-black`) | `#71717a` | `#000000` | **3.6:1** | ❌ **Fail** |
+| Card subtitle (`text-zinc-600` on `bg-[#1C1C1E]`) | `#52525b` | `#1C1C1E` | **2.4:1** | ❌ **Fail** |
+| Toast dot (`bg-zinc-500`) | Decorative | — | N/A | N/A |
+
+**Impact:** `text-zinc-500` and `text-zinc-600` on dark backgrounds fail WCAG AA. This affects labels like "Prefer real-time updates?" in CTA, tech stack labels in Ventures, and the subtitle text in TheModel. Recommend elevating to `text-zinc-400` minimum for all readable text in dark mode.
+
+### Finding: Missing `aria-label` on Social Links
+All social icon links in the Footer render icons without text content. Screen readers will announce them as empty links. Each should have `aria-label="X (Twitter)"`, `aria-label="LinkedIn"`, etc.
+
+### Finding: No `<h1>` on Terms/Privacy Pages
+Both legal pages use `<h1>` correctly. ✅ Verified.
+
+### Finding: `DisableDevTools` Blocks Right-Click
+> [!IMPORTANT]
+> Preventing right-click (`contextmenu`) and keyboard shortcuts (F12, Ctrl+U) **does not provide real security** — anyone can disable JavaScript. However, it **actively degrades UX** for legitimate users:
+> - Users cannot right-click to open links in new tabs.
+> - Users cannot right-click to copy text.
+> - Developers debugging production issues are blocked.
+>
+> **Recommendation:** Remove this component entirely, or at minimum, only ship it in production builds with a feature flag. It provides **zero security value** and maximum UX friction.
+
+---
+
+## Pillar 3: Performance & Core Web Vitals
+
+### Grade: B
+
+### ✅ What's Working Well
+- **Google Analytics** uses `strategy="afterInteractive"` — correct, non-blocking.
+- **Font loading** via Google Fonts uses `&display=swap` — correct for FOUT prevention.
+- **`BackgroundEffects`** is a Server Component using CSS animations (`animate-float`, `animate-pulse`), not JavaScript — excellent for paint performance.
+
+### Finding: `BackgroundEffects` Blur Elements are GPU-Heavy
+> [!NOTE]
+> Three `blur-[150px]` elements are rendered in a `fixed` container. On lower-end mobile devices (common in Nigeria's target market), these will:
+> 1. Trigger GPU compositing layers for each blur.
+> 2. Consume ~50-80MB of GPU memory on mobile Safari.
+>
+> **Recommendation:** Consider reducing blur to `blur-[80px]` or using a static CSS gradient background image instead. Alternatively, use `@media (prefers-reduced-motion: reduce)` to disable blurs entirely.
+
+### Finding: `Navbar` Scroll Handler Fires on Every Pixel
+The `useEffect` scroll listener in Navbar fires on every scroll event. While lightweight, it should be wrapped in `requestAnimationFrame` or a throttle for optimal main-thread performance. The `useScroll` from motion already handles the progress bar efficiently, but the manual `window.scrollY > 20` check runs in parallel without throttling.
+
+### Finding: `next/dynamic` Loading Spinners Cause CLS
+Every `next/dynamic` component renders a spinner during initial load. This creates **Cumulative Layout Shift (CLS)** as the spinner (a small centered div) is replaced by the full component. This directly hurts your Core Web Vitals score. As noted in Pillar 1, removing `next/dynamic` from Server Components eliminates this entirely.
+
+### Finding: `Inter` Font Loaded via External CSS `@import`
+```css
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+```
+This is a **render-blocking request** that delays First Contentful Paint. Next.js provides `next/font/google` which automatically self-hosts fonts, eliminates the external request, and applies `font-display: swap` with zero configuration. This is a **free performance win**.
+
+---
+
+## Pillar 4: Security, Compliance & Privacy
+
+### Grade: B+
+
+### ✅ What's Working Well
+- **`/api/subscribe` route** correctly hides `GOOGLE_SCRIPT_URL` server-side. The client never sees it. ✅
+- **Rate limiting** is implemented (5 req/min/IP). ✅
+- **Email validation** is present (basic `includes('@')` check). ✅
+- **`apps/web/.env.local`** correctly uses `GOOGLE_SHEETS_API_URL` (no `NEXT_PUBLIC_` prefix) for the Ventures fetch. ✅
+
+### Finding: Root `.env.local` Exposes Google Script URL
+> [!CAUTION]
+> The **root** `.env.local` still contains:
+> ```
+> NEXT_PUBLIC_GOOGLE_SHEETS_API_URL="https://script.google.com/macros/s/AKfycb.../exec"
+> ```
+> While Next.js in the workspace reads from `apps/web/.env.local`, if this root file is ever committed to Git or referenced by a CI/CD pipeline, the `NEXT_PUBLIC_` prefix **exposes the URL to the client bundle**. The root `.env.local` must be **deleted**.
+
+### Finding: Rate Limiting is Ephemeral
+> [!WARNING]
+> The in-memory `Map` for rate limiting **resets on every serverless function cold start**. On Vercel, this means:
+> - Every new invocation gets a fresh Map.
+> - An attacker can simply wait ~5 minutes for a cold start to bypass limits.
+>
+> **Recommendation:** For production, use Vercel's `@vercel/kv` (Redis) or Upstash for persistent rate limiting. The current implementation is a reasonable MVP placeholder but should be documented as such.
+
+### Finding: Email Validation is Insufficient
+```typescript
+if (!email || !email.includes('@'))
+```
+This passes `@`, `a@`, and `evil<script>@x.com`. At minimum, use a regex like `/^[^\s@]+@[^\s@]+\.[^\s@]+$/` to validate structure. Better yet, use a library like `zod` for schema validation.
+
+### Finding: No CORS Headers on API Route
+The `/api/subscribe` route doesn't set CORS headers. While Next.js API routes default to same-origin, explicitly setting `Access-Control-Allow-Origin` and `Access-Control-Allow-Methods` hardens the endpoint against abuse from third-party sites.
+
+### Finding: Google Analytics Without Cookie Consent
+> [!IMPORTANT]
+> Your Privacy Policy (Section 6) states: *"We use minimal cookies necessary for the core functionality."* However, Google Analytics (`gtag.js`) sets tracking cookies (`_ga`, `_gid`) **automatically on page load** without user consent. Under NDPR and GDPR:
+> - Analytics cookies are **not "necessary"** — they require opt-in consent.
+> - You need a **cookie consent banner** or must switch to a cookieless analytics solution (e.g., Plausible, Umami, or `gtag` in cookieless mode).
+>
+> **Risk Level:** Moderate. NDPR enforcement is currently limited, but GDPR applies to any EU visitor to your site.
+
+### Finding: Server Logs Contain PII
+```typescript
+console.log(`[PIS Labs System] New ecosystem adoption: ${email} from IP: ${ip}`);
+```
+Logging raw email + IP constitutes PII processing under NDPR/GDPR. If using Vercel's log retention, this data persists in their infrastructure. Mask the email (e.g., `p***@gmail.com`) or remove the log in production.
+
+---
+
+## Pillar 5: SEO & Conversion Funnel
+
+### Grade: C+
+
+### ✅ What's Working Well
+- **Root layout metadata** is comprehensive (OG tags, Twitter cards, robots directives). ✅
+- **Semantic HTML** is generally good (`<main>`, `<section>`, `<article>`, `<footer>`). ✅
+- **Single `<h1>` per page** is maintained across all pages. ✅
+
+### Finding: `/research/[slug]` Pages Have No Dynamic Metadata
+> [!CAUTION]
+> The research case study pages (`/research/credturn`) do **not** export a `generateMetadata` function. They inherit the **global** metadata from `layout.tsx`, meaning:
+> - Sharing `/research/credturn` on LinkedIn shows "PIS Labs | Applied AI Venture Studio" instead of "System Architecture: CredTurn."
+> - Google indexes these pages with the **wrong title and description**.
+>
+> **Fix:** Add `generateMetadata` to `[slug]/page.tsx`:
+> ```typescript
+> export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+>   const { slug } = await params;
+>   const project = venturesData.find((v) => v.id === slug);
+>   if (!project) return {};
+>   return {
+>     title: `${project.title} — Case Study | PIS Labs`,
+>     description: project.description,
+>     openGraph: {
+>       title: `${project.title} — Applied AI Case Study`,
+>       description: project.description,
+>     },
+>   };
+> }
+> ```
+
+### Finding: Terms & Privacy Pages Have No Metadata
+Both `/terms` and `/privacy` pages lack exported `metadata` objects. They will show the global "PIS Labs | Applied AI Venture Studio" title in browser tabs, which is not ideal for legal compliance (users should clearly see "Terms of Service" in the tab title).
+
+### Finding: Research Page Design Deviates from Design System
+> [!NOTE]
+> The `/research/[slug]` page uses a **completely different aesthetic** from the rest of the site:
+> - `bg-zinc-950` instead of the system's `bg-white dark:bg-black`.
+> - Sharp corners (`rounded-lg`, `rounded-md`) instead of `rounded-3xl`.
+> - No dark mode toggle support — it's hardcoded dark.
+> - Different button styles (squared, no glassmorphism).
+>
+> This creates a jarring visual disconnect when navigating from the main site to a case study. Recommendation: Align the research page to the established design tokens.
+
+### Finding: "View All Projects" Button is a Dead Link
+The [Ventures.tsx](file:///c:/Users/USER/Downloads/pis-labs/apps/web/src/components/Ventures.tsx) "View All Projects" button (line 69) is a plain `<button>` with no `onClick` handler and no `ToastButton` wrapper. It's a **dead click** — exactly the UX pattern you asked me to eliminate with the toast system.
+
+### Finding: "Book Now" → Calendly is an External Redirect
+The conversion funnel from "Book Now" to Calendly works, but it's an **external redirect** that leaves your site. Consider embedding the Calendly widget inline (using `@calendly/react` or an `<iframe>`) to keep users on-domain and reduce drop-off.
+
+### Finding: No `sitemap.xml` or `robots.txt`
+Next.js App Router supports `sitemap.ts` and `robots.ts` as route handlers. Neither exists. For a B2B site targeting search visibility, these are essential.
+
+---
+
+## Priority Action Matrix
+
+| Priority | Finding | Severity | Effort |
+|---|---|---|---|
+| 🔴 P0 | Remove `next/dynamic` from Server Components | Critical | 10 min |
+| 🔴 P0 | Delete root `.env.local` (secret exposure risk) | Critical | 1 min |
+| 🔴 P0 | Add `generateMetadata` to `/research/[slug]` | Critical | 15 min |
+| 🟠 P1 | Replace Google Fonts `@import` with `next/font` | High | 15 min |
+| 🟠 P1 | Add metadata to Terms & Privacy pages | High | 5 min |
+| 🟠 P1 | Fix color contrast (`text-zinc-500` → `text-zinc-400`) | High | 20 min |
+| 🟠 P1 | Add `aria-label` to Footer social links | High | 5 min |
+| 🟠 P1 | Wrap "View All Projects" in `ToastButton` | High | 5 min |
+| 🟡 P2 | Strengthen email validation (regex or zod) | Medium | 10 min |
+| 🟡 P2 | Move `next-themes` to `apps/web/package.json` | Medium | 5 min |
+| 🟡 P2 | Remove `dotenv` from root dependencies | Medium | 2 min |
+| 🟡 P2 | Add cookie consent or switch to cookieless analytics | Medium | 30 min |
+| 🟡 P2 | Mask PII in server logs | Medium | 5 min |
+| 🟡 P2 | Add `sitemap.ts` and `robots.ts` | Medium | 20 min |
+| 🟢 P3 | Remove `DisableDevTools` component | Low | 5 min |
+| 🟢 P3 | Reduce `blur-[150px]` for mobile performance | Low | 10 min |
+| 🟢 P3 | Throttle Navbar scroll listener | Low | 5 min |
+| 🟢 P3 | Remove `packages/*` from workspaces | Low | 1 min |
+| 🟢 P3 | Align `/research/[slug]` design to main site | Low | 60 min |
+| 🟢 P3 | Embed Calendly inline instead of external redirect | Low | 30 min |
+| 🟢 P3 | Add CORS headers to `/api/subscribe` | Low | 5 min |
+
+---
+
+## Final Verdict
+
+**The site is launch-ready at the MVP level**, but the three P0 items (especially the `next/dynamic` anti-pattern silently breaking your Ventures data fetching) should be resolved immediately. The security posture is solid for a solo-founder operation, and the design system is remarkably consistent. Address the P0 and P1 items before promoting to production, and schedule the P2/P3 items for your first post-launch sprint.

@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer base {
+  html, body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  html::-webkit-scrollbar, body::-webkit-scrollbar, *::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}
