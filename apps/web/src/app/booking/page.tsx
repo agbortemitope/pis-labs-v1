@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { InlineWidget } from 'react-calendly';
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
+import { Navbar } from '@/components/layout/Navbar';
+import { Footer } from '@/components/layout/Footer';
 
 export default function BookingPage() {
   const [mounted, setMounted] = useState(false);

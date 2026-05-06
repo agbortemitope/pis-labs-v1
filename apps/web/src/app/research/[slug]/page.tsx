@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, Terminal, GitCommit, Layers, Cpu } from 'lucide-react';
-import { getVentures } from '@/lib/data/ventures';
+import { getVentures } from '@/lib/api/ventures';
 
 export async function generateStaticParams() {
   const ventures = await getVentures();

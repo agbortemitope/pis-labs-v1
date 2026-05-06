@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react';
-import { Navbar } from '@/components/Navbar';
-import { Hero } from '@/components/Hero';
-import { TheModel } from '@/components/TheModel';
-import { Ventures } from '@/components/Ventures';
-import { FounderPhilosophy } from '@/components/FounderPhilosophy';
-import { CTA } from '@/components/CTA';
-import { Footer } from '@/components/Footer';
+import { Navbar } from '@/components/layout/Navbar';
+import { Hero } from '@/components/sections/Hero';
+import { TheModel } from '@/components/sections/TheModel';
+import { Ventures } from '@/components/sections/Ventures';
+import { FounderPhilosophy } from '@/components/sections/FounderPhilosophy';
+import { CTA } from '@/components/sections/CTA';
+import { Footer } from '@/components/layout/Footer';
 
 export default function Page() {
   return (

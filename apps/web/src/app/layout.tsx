@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import { BackgroundEffects } from "@/components/BackgroundEffects";
-import { ToastProvider } from "@/components/ToastProvider";
-import { CookieConsent } from "@/components/CookieConsent";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { BackgroundEffects } from "@/components/ui/BackgroundEffects";
+import { ToastProvider } from "@/components/providers/ToastProvider";
+import { CookieConsent } from "@/components/ui/CookieConsent";
 
 const inter = Inter({
   subsets: ['latin'],
