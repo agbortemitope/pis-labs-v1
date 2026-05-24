@@ -3,7 +3,17 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --color-primary-purple: #6600ff;
+  --color-ink-black: #111827;
+  --color-purple-tint: #C299FF;
+  --color-purple-shade: #3D0099;
+  --color-dark-grey: #4D4D4D;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  
   --animate-float: float 6s ease-in-out infinite;
 
   @keyframes float {

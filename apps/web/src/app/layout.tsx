@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { BackgroundEffects } from "@/components/BackgroundEffects";
@@ -11,6 +11,12 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-space-grotesk',
 });
 
 export const metadata: Metadata = {
@@ -109,7 +115,7 @@ export default function RootLayout({
       </head>
       <body 
         suppressHydrationWarning
-        className={`${inter.variable} bg-transparent text-zinc-900 dark:text-zinc-100 font-sans antialiased selection:bg-black/10 dark:selection:bg-white/20 selection:text-black dark:selection:text-white transition-colors duration-300`}
+        className={`${inter.variable} ${spaceGrotesk.variable} bg-[#F4F4F4] dark:bg-black text-[#111827] dark:text-[#F4F4F4] font-sans antialiased selection:bg-[#6600ff]/20 dark:selection:bg-[#C299FF]/20 selection:text-black dark:selection:text-white transition-colors duration-300`}
       >
         <ThemeProvider
           attribute="class"
