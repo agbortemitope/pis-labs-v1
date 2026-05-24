@@ -42,7 +42,7 @@ PIS Labs runs execution-focused workshops designed around real operational probl
 
 The workshops are structured into two tracks:
 
-**Operational Systems Track**
+**Venture Operations Track**
 
 Participants learn how to:
 
@@ -52,7 +52,7 @@ Participants learn how to:
 - Design operational structures
 - Recommend scalable solutions
 
-**Product Engineering Track**
+**Venture Engineering Track**
 
 Participants focus on:
 
