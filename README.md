@@ -84,6 +84,35 @@ The "Join the Ecosystem" CTA routes emails through a secure Next.js API endpoint
 
 ---
 
+## Dev Guide (please make sure you follow all instructions)
+
+- Make your pull request to the `main` branch only
+- Create your branch from the `main` branch (this happens only the first time you clone the repo)
+
+  ```sh
+    git checkout -b --your-github-name
+  ```
+
+- Update your branch before working on any task
+
+  ```sh
+    git checkout main
+    git pull
+    git checkout --your-github-name
+    git merge main
+  ```
+- You're not allowed to push the `main` except your branch
+
+  ```sh
+    git push --your-github-name
+  ```
+- Ensure you have a good commit message
+- Make sure you do not push a dev | build error
+- Do not create a `pages` folder as we are working with the `app` folder
+- You're not allowed to install any npm package without informing @pelumiogunremu | @trinitycodez
+
+---
+
 ## Getting Started (Local Development)
 
 ### Prerequisites
@@ -125,6 +154,28 @@ The "Join the Ecosystem" CTA routes emails through a secure Next.js API endpoint
     ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+---
+
+### Creating a component
+
+- your folder name must be in lowercase `progress-bar` and your file name must be `index.tsx`
+- if needed your scss name must be `index.module.scss`
+- temaplate example:
+
+  ```tsx
+  import { FC } from "react";
+
+  type Props = {
+    length: string;
+  };
+
+  const ProgressBar: FC<Props> = ({ length }) => {
+    return <div className="app-container">{length}</div>;
+  };
+
+  export default ProgressBar;
+  ```
 
 ---
 
