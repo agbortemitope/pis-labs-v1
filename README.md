@@ -1,333 +1,111 @@
-# PIS Labs | Operational Intelligence & Venture Infrastructure System
+# PIS Labs | Operational Intelligence and Venture Studio
 
-Welcome to the official repository for the PIS Labs digital infrastructure.
+PIS Labs is an operational intelligence and venture studio focused on helping businesses identify operational bottlenecks, implement scalable systems, and transform validated solutions into scalable ventures.
 
-PIS Labs is an operational intelligence and venture infrastructure company focused on helping SMEs identify operational bottlenecks, redesign scalable systems, and transform validated operational solutions into scalable ventures.
+We operate at the intersection of:
 
-Instead of starting with assumptions, we begin with real operational problems discovered directly inside businesses.
+- Operational Consulting
+- Systems Design
+- Applied AI
+- Venture Development
+- Talent Execution
 
-**Live Website:** [PIS Labs](https://pis-labs.com)
+Our model is built around one core belief:
 
----
+**Many businesses are not limited by ideas — they are limited by weak operational systems.**
 
-## The PIS Labs Model
+Instead of building random startups disconnected from real market problems, PIS Labs works directly with businesses to uncover operational friction, architect scalable solutions, and develop repeatable systems that can evolve into products and ventures.
 
-PIS Labs operates as a connected ecosystem built around three core functions:
-
-**Consulting** → Discover operational bottlenecks  
-**Workshops** → Train execution-focused talent  
-**Studio** → Build scalable ventures from validated operational gaps
-
-The system functions as a continuous intelligence loop:
-
-**Consulting → Gap Discovery → Talent Execution → Venture Creation → Deployment**
+**Website:** [PIS Labs](https://pis-labs.com)
 
 ---
 
-## Core Thesis
+## What We Do
 
-Most SMEs do not fail because they lack ideas.
+### 1. Consulting
 
-They struggle because:
+We work with SMEs and growing businesses to:
 
-- Their operations are fragmented
-- Their workflows are reactive
-- Their systems are manual and founder-dependent
-- Their execution environments are difficult to scale
+- Conduct operational audits
+- Identify workflow bottlenecks
+- Map execution gaps
+- Design scalable operational systems
+- Support implementation and optimization
 
-Most businesses do not even know where the real bottlenecks exist.
-
-PIS Labs enters through operational consulting, maps these bottlenecks, designs scalable operational systems, and converts recurring patterns into scalable products and ventures.
-
----
-
-## The Three Core Arms
-
-### 1. Consulting Arm — Operational Intelligence
-
-**Mission**
-
-Help businesses identify operational bottlenecks, redesign execution systems, and implement scalable operational infrastructure.
-
-This is not traditional consulting.
-
-PIS Labs focuses on:
-
-- Operational audits
-- Workflow analysis
-- Systems architecture
-- AI workflow integration
-- Operational transformation
-- Execution infrastructure
-
-**Operational Audit Philosophy**
-
-We do not rely purely on surveys or assumptions.
-
-We study:
-
-- Communication flows
-- Task dependencies
-- Reporting systems
-- Internal coordination structures
-- Workflow breakdowns
-- Execution bottlenecks
-
-The goal is to identify:
-
-- Hidden operational friction
-- Repeatable inefficiencies
-- Systemic scalability blockers
-
-**Core Deliverables**
-
-- Operational audit reports
-- Workflow redesigns
-- Systems architecture blueprints
-- AI workflow recommendations
-- Implementation strategies
-- Operational transformation support
-
-**Core Principle**
-
-Consulting is the intelligence layer.
-
-Every operational gap discovered becomes:
-
-- A systems opportunity
-- A tooling opportunity
-- Or a venture opportunity
+Our focus is operational clarity, scalability, and execution infrastructure.
 
 ---
 
-### 2. Workshops Arm — Talent & Execution Engine
+### 2. Workshops
 
-**Mission**
+PIS Labs runs execution-focused workshops designed around real operational problems discovered during consulting engagements.
 
-Train operators and builders to work on real operational systems and venture infrastructure.
+The workshops are structured into two tracks:
 
-PIS Labs workshops are not tutorial-based learning environments.
+**Operational Systems Track**
 
-They are execution-focused sprint systems built around real operational problems discovered through consulting engagements.
+Participants learn how to:
 
-**Two Core Tracks**
+- Conduct operational audits
+- Identify system loopholes
+- Map workflows
+- Design operational structures
+- Recommend scalable solutions
 
-**A. Operations Systems Track**
+**Product Engineering Track**
 
-Participants learn:
+Participants focus on:
 
-- Operational auditing
-- Bottleneck extraction
-- Workflow mapping
-- Systems thinking
-- Operational architecture
-- AI workflow planning
+- Building internal tools
+- Developing automation systems
+- Creating AI-assisted workflows
+- Engineering scalable software infrastructure
 
-The focus is understanding how businesses actually function and identifying where scalable systems can be introduced.
-
-**B. Product Engineering Track**
-
-Participants learn:
-
-- Internal tooling
-- Automation systems
-- AI-assisted infrastructure
-- Workflow implementation
-- Systems deployment
-- Operational software engineering
-
-The focus is building solutions for the operational gaps discovered during consulting.
-
-**Workshop Model**
-
-**Pre-Workshop Phase**
-
-Participants are trained before sprint day.
-
-**Sprint Day**
-
-Business owners are invited for:
-
-- Free operational audits
-- Workflow diagnosis
-- Operational assessments
-
-**Execution Phase**
-
-Participants work on:
-
-- Operational mapping
-- Systems recommendations
-- Prototype implementation
-- Internal venture tooling
-
-**Talent Pipeline**
-
-Top participants move into:
-
-- Client implementation teams
-- Internal product development
-- Studio venture builds
+Top participants may later contribute to live internal projects and venture builds.
 
 ---
 
-### 3. Studio Arm — Venture Infrastructure
+### 3. Studio
 
-**Mission**
+The Studio arm develops scalable solutions based on validated operational problems identified during consulting engagements.
 
-Transform validated operational bottlenecks into scalable ventures and operational products.
+Rather than building speculative products, we focus on:
 
-The Studio does not operate on random startup assumptions.
-
-Every product originates from:
-
-- Real operational problems
-- Active implementation environments
-- Repeatable business inefficiencies
-
-**Venture Creation Pipeline**
-
-Operational Audit  
-        ↓  
-Gap Identification  
-        ↓  
-Systems Architecture  
-        ↓  
-Prototype Development  
-        ↓  
-Operational Validation  
-        ↓  
-Venture/Product Creation
-
-**Focus Areas**
-
-- SME operational infrastructure
-- Workflow systems
-- AI-enabled operations
-- Internal tooling
-- Automation infrastructure
-- Operational intelligence systems
-
----
-
-## Operational Intelligence Flywheel
-
-PIS Labs operates through a closed operational intelligence loop:
-
-1. **Consulting**
-
-Operational audits uncover hidden bottlenecks.
-
-↓
-
-2. **Intelligence Extraction**
-
-Recurring operational patterns are identified.
-
-↓
-
-3. **Workshops**
-
-Operators and engineers are trained to solve these problems.
-
-↓
-
-4. **Studio**
-
-Validated solutions become scalable ventures.
-
-↓
-
-5. **Deployment**
-
-Solutions are deployed back into businesses.
-
-↓
-
-6. **Intelligence Expansion**
-
-New operational insights feed the next cycle.
-
----
-
-## Current Focus
-
-PIS Labs is currently focused on:
-
-- SMEs in Nigeria
-- Retail operations
-- Scaling businesses with operational inefficiencies
-- AI-assisted operational systems
+- Repeatable operational gaps
+- Proven implementation needs
 - Workflow infrastructure
+- AI-assisted operational systems
 
-**Current Internal Products**
-
-**Prism**
-
-Internal operational tool currently active and approaching internal acquisition by a client.
-
-**Acute**
-
-Early-stage operational solution currently under development.
+The goal is to transform validated business problems into scalable ventures and infrastructure products.
 
 ---
 
-## Philosophy
+## Core Philosophy
 
-### Operational Reality Over Startup Assumptions
+PIS Labs is built on:
 
-Most startups begin with:
+- **Clarity over hype**
+- **Systems over survival**
+- **Execution over theory**
+- **Validation before scale**
 
-- Market assumptions
-- Trend chasing
-- Hypothetical user problems
-
-PIS Labs begins with:
-
-- Existing operational friction
-- Validated execution bottlenecks
-- Real implementation environments
+We believe scalable businesses are built on strong operational foundations — not reactive execution.
 
 ---
 
-## Tech Stack & Architecture
+## Tech Stack
 
-This application is built as a strict Monorepo to support scalable venture and infrastructure development.
-
-**Core Stack**
-
-- Framework: Next.js (App Router)
-- Language: TypeScript
-- Styling: Tailwind CSS
-- Icons: Lucide React
-- Validation: Zod
-- Lead Capture: Next.js Server Actions
-- Storage Layer: Google Sheets (temporary)
-- Future Infrastructure: Supabase/Postgres
-- Booking Engine: Calendly
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Backend Integrations:** Google Apps Script / Google Sheets
+- **Validation:** Zod
+- **Deployment:** Vercel
 
 ---
 
-## UI & Product Philosophy
-
-The UI system prioritizes:
-
-- Clarity over decoration
-- Structure over noise
-- Conversion over aesthetics
-
-**Core principles:**
-
-- Large typography
-- Minimal navigation
-- Card-based interactions
-- Mobile-first execution
-- Purple/Onyx design system
-- Guided decision architecture
-
----
-
-## Monorepo Structure
+## Repository Structure
 
 ```
 pis-labs/
@@ -347,28 +125,19 @@ pis-labs/
 
 ---
 
-## Core Platform Principles
+## Development Guidelines
 
-- No dead-end user flows
-- Every page has one primary action
-- Trust before conversion
-- Operational clarity before capture
-- Real implementation over hype
-- Systems thinking over isolated tools
+### Branching
 
----
-
-## Development Guide
-
-### Branching Rules
-
-Create branches from main only:
+Create your branch from main.
 
 ```sh
 git checkout -b your-github-name
 ```
 
-Update branch before working:
+### Before Working
+
+Always sync with the latest version of main.
 
 ```sh
 git checkout main
@@ -377,13 +146,13 @@ git checkout your-github-name
 git merge main
 ```
 
-### Important Rules
+### Rules
 
 - Do not push directly to main
-- Ensure clean commit history
-- Do not introduce build errors
-- Use the Next.js app directory only
-- Do not install packages without approval
+- Use meaningful commit messages
+- Ensure builds pass before pushing
+- Use the Next.js app directory (not pages)
+- Do not install new packages without approval
 
 ---
 
@@ -396,7 +165,7 @@ git merge main
 
 ### Installation
 
-Clone repository:
+Clone the repository:
 
 ```sh
 git clone https://github.com/your-username/pis-labs.git
@@ -409,39 +178,48 @@ Install dependencies:
 npm install
 ```
 
-### Environment Variables
+Create environment variables:
 
-Inside apps/web/.env.local
+```sh
+cd apps/web
+touch .env.local
+```
+
+Add required variables:
 
 ```
 NEXT_PUBLIC_GOOGLE_SHEETS_API_URL=your_url
 GOOGLE_SCRIPT_URL=your_url
 ```
 
-### Run Development Server
+Run development server:
 
 ```sh
 npm run dev
+```
+
+Visit:
+
+```
+http://localhost:3000
 ```
 
 ---
 
 ## Deployment
 
-Optimized for deployment on Vercel
+This project is optimized for deployment on Vercel.
 
-Deployment steps:
+Steps:
 
-1. Push repository to GitHub
-2. Import project into Vercel
-3. Configure monorepo root
-4. Add environment variables
-5. Deploy
+1. Push code to GitHub
+2. Import repository into Vercel
+3. Configure environment variables
+4. Deploy
 
 ---
 
 ## Contact
 
-- Website: [PIS Labs](https://pis-labs.com)
-- Email: contact@pis-labs.com
-- Community: [WhatsApp Channel](https://whatsapp.com/channel/0029VbCOWfn2ER6phFDY0k0J)
+- **Website:** [PIS Labs](https://pis-labs.com)
+- **Email:** contact@pis-labs.com
