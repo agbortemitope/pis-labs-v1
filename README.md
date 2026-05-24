@@ -1,324 +1,447 @@
-# PIS Labs | Applied AI Venture Studio 
+# PIS Labs | Operational Intelligence & Venture Infrastructure System
 
-Welcome to the official repository for the **PIS Labs** digital infrastructure.
+Welcome to the official repository for the PIS Labs digital infrastructure.
 
-PIS Labs is an **Applied AI Venture Studio** based in Nigeria. We build scalable, API-first digital systems and production-grade software by leveraging AI as an execution multiplier and systems architect.
+PIS Labs is an operational intelligence and venture infrastructure company focused on helping SMEs identify operational bottlenecks, redesign scalable systems, and transform validated operational solutions into scalable ventures.
 
-**Live Website:** [pis-labs.com](https://pis-labs.com)
+Instead of starting with assumptions, we begin with real operational problems discovered directly inside businesses.
+
+**Live Website:** [PIS Labs](https://pis-labs.com)
 
 ---
 
-## The Venture Studio Model
+## The PIS Labs Model
 
-Unlike traditional agencies or accelerators, every project built at PIS Labs generates three distinct, mandatory outputs:
+PIS Labs operates as a connected ecosystem built around three core functions:
 
-1. **Research (Authority):** Applied AI papers, technical case studies, and system performance analyses.
-2. **Build (Utility):** Production-grade software systems (not just prototypes), scalable architectures, and real-world MVPs.
-3. **Distribute (Community):** Engineered growth systems, feedback loops, and tight early-adopter WhatsApp communities.
+**Consulting** → Discover operational bottlenecks  
+**Workshops** → Train execution-focused talent  
+**Studio** → Build scalable ventures from validated operational gaps
 
-### The AI-Leveraged Philosophy
-PIS Labs operates without large, bloated engineering teams. By leveraging advanced AI models as a development engine and systems architect, we achieve massive execution multiplication, building scalable systems end-to-end with unprecedented speed.
+The system functions as a continuous intelligence loop:
+
+**Consulting → Gap Discovery → Talent Execution → Venture Creation → Deployment**
+
+---
+
+## Core Thesis
+
+Most SMEs do not fail because they lack ideas.
+
+They struggle because:
+
+- Their operations are fragmented
+- Their workflows are reactive
+- Their systems are manual and founder-dependent
+- Their execution environments are difficult to scale
+
+Most businesses do not even know where the real bottlenecks exist.
+
+PIS Labs enters through operational consulting, maps these bottlenecks, designs scalable operational systems, and converts recurring patterns into scalable products and ventures.
+
+---
+
+## The Three Core Arms
+
+### 1. Consulting Arm — Operational Intelligence
+
+**Mission**
+
+Help businesses identify operational bottlenecks, redesign execution systems, and implement scalable operational infrastructure.
+
+This is not traditional consulting.
+
+PIS Labs focuses on:
+
+- Operational audits
+- Workflow analysis
+- Systems architecture
+- AI workflow integration
+- Operational transformation
+- Execution infrastructure
+
+**Operational Audit Philosophy**
+
+We do not rely purely on surveys or assumptions.
+
+We study:
+
+- Communication flows
+- Task dependencies
+- Reporting systems
+- Internal coordination structures
+- Workflow breakdowns
+- Execution bottlenecks
+
+The goal is to identify:
+
+- Hidden operational friction
+- Repeatable inefficiencies
+- Systemic scalability blockers
+
+**Core Deliverables**
+
+- Operational audit reports
+- Workflow redesigns
+- Systems architecture blueprints
+- AI workflow recommendations
+- Implementation strategies
+- Operational transformation support
+
+**Core Principle**
+
+Consulting is the intelligence layer.
+
+Every operational gap discovered becomes:
+
+- A systems opportunity
+- A tooling opportunity
+- Or a venture opportunity
+
+---
+
+### 2. Workshops Arm — Talent & Execution Engine
+
+**Mission**
+
+Train operators and builders to work on real operational systems and venture infrastructure.
+
+PIS Labs workshops are not tutorial-based learning environments.
+
+They are execution-focused sprint systems built around real operational problems discovered through consulting engagements.
+
+**Two Core Tracks**
+
+**A. Operations Systems Track**
+
+Participants learn:
+
+- Operational auditing
+- Bottleneck extraction
+- Workflow mapping
+- Systems thinking
+- Operational architecture
+- AI workflow planning
+
+The focus is understanding how businesses actually function and identifying where scalable systems can be introduced.
+
+**B. Product Engineering Track**
+
+Participants learn:
+
+- Internal tooling
+- Automation systems
+- AI-assisted infrastructure
+- Workflow implementation
+- Systems deployment
+- Operational software engineering
+
+The focus is building solutions for the operational gaps discovered during consulting.
+
+**Workshop Model**
+
+**Pre-Workshop Phase**
+
+Participants are trained before sprint day.
+
+**Sprint Day**
+
+Business owners are invited for:
+
+- Free operational audits
+- Workflow diagnosis
+- Operational assessments
+
+**Execution Phase**
+
+Participants work on:
+
+- Operational mapping
+- Systems recommendations
+- Prototype implementation
+- Internal venture tooling
+
+**Talent Pipeline**
+
+Top participants move into:
+
+- Client implementation teams
+- Internal product development
+- Studio venture builds
+
+---
+
+### 3. Studio Arm — Venture Infrastructure
+
+**Mission**
+
+Transform validated operational bottlenecks into scalable ventures and operational products.
+
+The Studio does not operate on random startup assumptions.
+
+Every product originates from:
+
+- Real operational problems
+- Active implementation environments
+- Repeatable business inefficiencies
+
+**Venture Creation Pipeline**
+
+Operational Audit  
+        ↓  
+Gap Identification  
+        ↓  
+Systems Architecture  
+        ↓  
+Prototype Development  
+        ↓  
+Operational Validation  
+        ↓  
+Venture/Product Creation
+
+**Focus Areas**
+
+- SME operational infrastructure
+- Workflow systems
+- AI-enabled operations
+- Internal tooling
+- Automation infrastructure
+- Operational intelligence systems
 
 ---
 
 ## Operational Intelligence Flywheel
 
-PIS Labs operates through a **closed-loop, six-stage operational intelligence flywheel** that transforms raw business friction into scalable ventures:
+PIS Labs operates through a closed operational intelligence loop:
 
-### 1. **Consulting** (Operational Audit & Intelligence Discovery)
-*Phase: Operational Audit & Intelligence Discovery*
+1. **Consulting**
 
-PIS Labs enters organizations through operational consulting. By studying actual business procedures, communication flaws, task dependencies, and systems bottlenecks, we uncover core operational gaps that traditional analysis misses.
+Operational audits uncover hidden bottlenecks.
 
-**Core Actions & Deliverables:**
-- Map out active physical & digital workflows
-- Expose structural friction and scalability blockers
-- Isolate systemic, repeatable inefficiencies
+↓
 
-**Inputs:** Unstructured business pain, raw workflows, founder dependency, disconnected tools.  
-**Outputs:** Validated operational blockages, mapping reports, recurring problem profiles.
+2. **Intelligence Extraction**
 
----
+Recurring operational patterns are identified.
 
-### 2. **Systems Strategy** (Strategic Architecture)
-*Phase: Tactical Architecture & Scalability Blueprint*
+↓
 
-Transform audit findings into a strategic roadmap. This phase crystallizes what can be systematized, what requires automation, and what should become a separate product.
+3. **Workshops**
 
-**Core Focus:**
-- Design scalable workflow structures
-- Build metrics-driven process infrastructure
-- Create strategic architectural blueprints for maximum leverage
+Operators and engineers are trained to solve these problems.
 
----
+↓
 
-### 3. **Product Engineering** (Execution & Prototyping)
-*Phase: Tool & System Development*
+4. **Studio**
 
-Engineers execute the strategic blueprint by building custom automation layers, internal software systems, and AI infrastructure pipelines to address the structural friction identified.
+Validated solutions become scalable ventures.
 
-**Core Focus:**
-- Develop hands-on tools and custom automation
-- Build internal software systems and integration layers
-- Create AI-powered infrastructure to bridge operational gaps
+↓
+
+5. **Deployment**
+
+Solutions are deployed back into businesses.
+
+↓
+
+6. **Intelligence Expansion**
+
+New operational insights feed the next cycle.
 
 ---
 
-### 4. **Studio** (Venture Development & Productization)
-*Phase: Venture Development & Scale*
+## Current Focus
 
-Transforms validated operational strategies into standardizable, scalable SaaS products, operational layers, and standalone high-growth ventures.
+PIS Labs is currently focused on:
 
-**Productization Pipeline:**
-- Package repetitive service fixes into modular software products
-- Develop automation dashboards and tailored API integrations
-- Slice proven patterns into venture-backed entities or enterprise SaaS offerings
+- SMEs in Nigeria
+- Retail operations
+- Scaling businesses with operational inefficiencies
+- AI-assisted operational systems
+- Workflow infrastructure
 
----
+**Current Internal Products**
 
-### 5. **Deployment** (Go-to-Market & Client Activation)
-*Phase: Production Rollout & Integration*
+**Prism**
 
-Launch engineered solutions into market and client systems. Feed products back to client bases and activate new revenue streams.
+Internal operational tool currently active and approaching internal acquisition by a client.
 
-**Core Actions:**
-- Deploy to production environments
-- Establish client training and adoption pipelines
-- Create ongoing support and optimization loops
+**Acute**
+
+Early-stage operational solution currently under development.
 
 ---
 
-### 6. **Expansion** (Intelligence Amplification & Cycle Restart)
-*Phase: Intelligence Multiplication & Ecosystem Growth*
+## Philosophy
 
-Deployment generates massive operational intelligence. Feed back into consulting to discover new patterns and scale the entire flywheel.
+### Operational Reality Over Startup Assumptions
 
-**Core Actions:**
-- Capture new operational intelligence from deployed systems
-- Identify emerging patterns across client base
-- Restart cycle with amplified intelligence
-- Build ecosystem network effects
+Most startups begin with:
 
----
+- Market assumptions
+- Trend chasing
+- Hypothetical user problems
 
-## The Three Interconnected Arms
+PIS Labs begins with:
 
-### **1. Consulting Arm** — *Discovery & Operational Intelligence*
-
-**Mission:** Not a traditional consulting agency. Focuses exclusively on mapping workflows, identifying bottlenecks, and extracting repeatable problem patterns across diverse organizations.
-
-**Core Sub-Functions:**
-- **Operational Audits:** Deep study of communication channels, reporting loops, task pipelines, and coordination failures.
-- **Systems Architecture:** Designing scalable workflows, automated structures, and metrics-driven process infrastructure.
-- **Intelligence Extraction:** Isolating bottlenecks that appear frequently across multiple companies to design modular solutions.
-
-**Approach:** Audit & Extract  
-**Deliverables:** Problem maps, friction reports, repeatable pattern frameworks
-
----
-
-### **2. Workshops Arm** — *Talent & Execution Pipelines*
-
-**Mission:** Replaces static academic learning with rigorous execution-focused sprint challenges built entirely around real operational problems discovered in Consulting.
-
-**Execution Tracks:**
-- **Venture Operations Track:** Equips builders to analyze operational loopholes, architect complex systems, map workflow trees, and formulate recommendations.
-- **Venture Build Track:** Develops hands-on tools, custom automation layers, internal software systems, and AI infrastructure pipelines to address structural friction.
-- **Talent Engine:** The highest-performing operators are filtered and injected directly into Studio venture construction pipelines.
-
-**Approach:** Learn by Doing  
-**Deliverables:** Trained talent, prototype solutions, foundational systems
-
----
-
-### **3. Studio Arm** — *Venture Development & Scale*
-
-**Mission:** Transforms validated operational strategies into standardizable, scalable SaaS products, operational layers, and standalone high-growth ventures.
-
-**Productization Pipeline:**
-- **Productization Standard:** Packaging repetitive custom service fixes into modular software products, automation dashboards, and tailored API integrations.
-- **Venture Development:** Slicing proven tooling patterns out as individual, venture-backed entities or enterprise SaaS offerings.
-- **The Deployment Loop:** Feeding products back to client bases, generating massive operational intelligence, and starting the cycle again.
-
-**Approach:** Productize & Scale  
-**Deliverables:** SaaS products, venture entities, scalable operational systems
+- Existing operational friction
+- Validated execution bottlenecks
+- Real implementation environments
 
 ---
 
 ## Tech Stack & Architecture
 
-This application is built as a strict **Monorepo** to ensure scalability as the studio launches new products (e.g., `apps/web` for the studio site, `apps/credturn` for future SaaS products).
+This application is built as a strict Monorepo to support scalable venture and infrastructure development.
 
-*   **Framework:** Next.js (App Router)
-*   **Language:** TypeScript
-*   **Styling:** Tailwind CSS (Mobile-first, strict iOS/Apple HIG aesthetic)
-*   **Icons:** Lucide React
-*   **Headless CMS:** Google Sheets API (via Google Apps Script)
-*   **Lead Capture:** Next.js Serverless API Routes -> Google Apps Script
-*   **Booking Engine:** Calendly Integration
-*   **Design System:** Premium Glassmorphism
+**Core Stack**
 
-### The UI Philosophy
-The UI rejects "developer brutalism" in favor of a high-end, consumer-grade aesthetic tailored for B2B executives and founders:
-
-*   **Deep Dark Mode:** Pure blacks (`bg-black`) and frosted glass (`backdrop-blur-2xl`, `bg-white/[0.02]`).
-*   **Soft Geometry:** Complete elimination of sharp corners (`rounded-3xl`, pill-shaped buttons).
-*   **Ambient Depth:** Fading technical grid backgrounds layered with ultra-blurred, low-opacity glowing orbs and floating crosshairs.
-*   **Frictionless UX:** Invisible scrolling on mobile, tactile active click states (`active:scale-[0.98]`), and optimized lazy loading.
+- Framework: Next.js (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS
+- Icons: Lucide React
+- Validation: Zod
+- Lead Capture: Next.js Server Actions
+- Storage Layer: Google Sheets (temporary)
+- Future Infrastructure: Supabase/Postgres
+- Booking Engine: Calendly
 
 ---
 
-## Monorepo Folder Structure
+## UI & Product Philosophy
 
-```text
+The UI system prioritizes:
+
+- Clarity over decoration
+- Structure over noise
+- Conversion over aesthetics
+
+**Core principles:**
+
+- Large typography
+- Minimal navigation
+- Card-based interactions
+- Mobile-first execution
+- Purple/Onyx design system
+- Guided decision architecture
+
+---
+
+## Monorepo Structure
+
+```
 pis-labs/
 ├── apps/
-│   └── web/                      # Main PIS Labs Next.js Application
-│       ├── public/               # Static assets
+│   └── web/
+│       ├── public/
 │       ├── src/
-│       │   ├── app/              # Next.js App Router (Orchestration & Routing)
-│       │   │   ├── api/          # Serverless Route Handlers (e.g., /subscribe)
-│       │   │   ├── research/     # Dynamic Case Study Pages ([slug])
-│       │   │   ├── layout.tsx    # Global Layout & Metadata
-│       │   │   └── page.tsx      # Main Landing Page Entry
-│       │   ├── components/       # Isolated, reusable UI Components
-│       │   │   ├── Hero.tsx
-│       │   │   ├── TheModel.tsx
-│       │   │   ├── Ventures.tsx
-│       │   │   └── BackgroundEffects.tsx
-│       │   └── lib/              # Utilities and Data fetching logic
+│       │   ├── app/
+│       │   ├── components/
+│       │   ├── lib/
+│       │   └── styles/
 │       ├── package.json
 │       └── tailwind.config.ts
-├── package.json                  # Root Monorepo configuration
+├── package.json
 └── README.md
 ```
 
 ---
 
-## Core Features
+## Core Platform Principles
 
-### 1. Zero-Friction Headless CMS (Google Sheets)
-To optimize for solo-founder speed, the `Ventures` component dynamically fetches live project data directly from a secured Google Sheet using a custom Apps Script `doGet` API. Adding a new project to the website takes 60 seconds and requires zero code deployment.
-
-### 2. Automated Sales Funnel
-Integrated Calendly widget allows B2B clients, SMEs, and micro-lenders to instantly book high-ticket "AI Discovery & Strategy Sessions" directly from the navigation bar.
-
-### 3. Secure Lead Capture
-The "Join the Ecosystem" CTA routes emails through a secure Next.js API endpoint (`/api/subscribe/route.ts`), which acts as a proxy to append data to a Google Sheet, bypassing frontend CORS issues and hiding the macro script URL.
+- No dead-end user flows
+- Every page has one primary action
+- Trust before conversion
+- Operational clarity before capture
+- Real implementation over hype
+- Systems thinking over isolated tools
 
 ---
 
-## Dev Guide (please make sure you follow all instructions)
+## Development Guide
 
-- Make your pull request to the `main` branch only
-- Create your branch from the `main` branch (this happens only the first time you clone the repo)
+### Branching Rules
 
-  ```sh
-    git checkout -b --your-github-name
-  ```
+Create branches from main only:
 
-- Update your branch before working on any task
+```sh
+git checkout -b your-github-name
+```
 
-  ```sh
-    git checkout main
-    git pull
-    git checkout --your-github-name
-    git merge main
-  ```
-- You're not allowed to push the `main` except your branch
+Update branch before working:
 
-  ```sh
-    git push --your-github-name
-  ```
-- Ensure you have a good commit message
-- Make sure you do not push a dev | build error
-- Do not create a `pages` folder as we are working with the `app` folder
-- You're not allowed to install any npm package without informing @pelumiogunremu | @trinitycodez
+```sh
+git checkout main
+git pull
+git checkout your-github-name
+git merge main
+```
+
+### Important Rules
+
+- Do not push directly to main
+- Ensure clean commit history
+- Do not introduce build errors
+- Use the Next.js app directory only
+- Do not install packages without approval
 
 ---
 
-## Getting Started (Local Development)
+## Local Development
 
 ### Prerequisites
-*   Node.js 18.x or higher
-*   npm, yarn, pnpm, or bun
+
+- Node.js 18+
+- npm / pnpm / yarn / bun
 
 ### Installation
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/your-username/pis-labs.git
-    cd pis-labs
-    ```
+Clone repository:
 
-2.  **Install dependencies at the root (Monorepo setup):**
-    ```bash
-    npm install
-    ```
+```sh
+git clone https://github.com/your-username/pis-labs.git
+cd pis-labs
+```
 
-3.  **Set up Environment Variables:**
-    Navigate to the web app and create a `.env.local` file:
-    ```bash
-    cd apps/web
-    touch .env.local
-    ```
+Install dependencies:
 
-4.  **Add the following variables:**
-    ```env
-    # Used for fetching dynamic venture data (doGet)
-    NEXT_PUBLIC_GOOGLE_SHEETS_API_URL=your_google_script_web_app_url_here
+```sh
+npm install
+```
 
-    # Used for securely posting emails (doPost)
-    GOOGLE_SCRIPT_URL=your_google_script_web_app_url_here
-    ```
+### Environment Variables
 
-5.  **Run the Development Server:**
-    ```bash
-    npm run dev
-    ```
+Inside apps/web/.env.local
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+```
+NEXT_PUBLIC_GOOGLE_SHEETS_API_URL=your_url
+GOOGLE_SCRIPT_URL=your_url
+```
 
----
+### Run Development Server
 
-### Creating a component
-
-- your folder name must be in lowercase `progress-bar` and your file name must be `index.tsx`
-- if needed your scss name must be `index.module.scss`
-- temaplate example:
-
-  ```tsx
-  import { FC } from "react";
-
-  type Props = {
-    length: string;
-  };
-
-  const ProgressBar: FC<Props> = ({ length }) => {
-    return <div className="app-container">{length}</div>;
-  };
-
-  export default ProgressBar;
-  ```
+```sh
+npm run dev
+```
 
 ---
 
 ## Deployment
 
-This repository is optimized for deployment on **Vercel**.
+Optimized for deployment on Vercel
 
-1.  Push your code to GitHub.
-2.  Import the repository into your Vercel dashboard.
-3.  Ensure the **Root Directory** is set to `apps/web` (or let Vercel auto-detect the monorepo).
-4.  Add the Environment Variables (`NEXT_PUBLIC_GOOGLE_SHEETS_API_URL` and `GOOGLE_SCRIPT_URL`) in the Vercel project settings.
-5.  Deploy.
+Deployment steps:
+
+1. Push repository to GitHub
+2. Import project into Vercel
+3. Configure monorepo root
+4. Add environment variables
+5. Deploy
 
 ---
 
-## Contact & Community
+## Contact
 
-*   **Email:** [contact@pis-labs.com](mailto:contact@pis-labs.com)
-*   **Community:** [Join the WhatsApp Channel](https://whatsapp.com/channel/0029VbCOWfn2ER6phFDY0k0J)
-*   **Consulting:** [Schedule an AI Discovery Session](https://calendly.com/pis-labs/30min)
-
-© 2026 PIS Labs. All rights reserved.
+- Website: [PIS Labs](https://pis-labs.com)
+- Email: contact@pis-labs.com
+- Community: [WhatsApp Channel](https://whatsapp.com/channel/0029VbCOWfn2ER6phFDY0k0J)
