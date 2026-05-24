@@ -21,6 +21,130 @@ PIS Labs operates without large, bloated engineering teams. By leveraging advanc
 
 ---
 
+## Operational Intelligence Flywheel
+
+PIS Labs operates through a **closed-loop, six-stage operational intelligence flywheel** that transforms raw business friction into scalable ventures:
+
+### 1. **Consulting** (Operational Audit & Intelligence Discovery)
+*Phase: Operational Audit & Intelligence Discovery*
+
+PIS Labs enters organizations through operational consulting. By studying actual business procedures, communication flaws, task dependencies, and systems bottlenecks, we uncover core operational gaps that traditional analysis misses.
+
+**Core Actions & Deliverables:**
+- Map out active physical & digital workflows
+- Expose structural friction and scalability blockers
+- Isolate systemic, repeatable inefficiencies
+
+**Inputs:** Unstructured business pain, raw workflows, founder dependency, disconnected tools.  
+**Outputs:** Validated operational blockages, mapping reports, recurring problem profiles.
+
+---
+
+### 2. **Systems Strategy** (Strategic Architecture)
+*Phase: Tactical Architecture & Scalability Blueprint*
+
+Transform audit findings into a strategic roadmap. This phase crystallizes what can be systematized, what requires automation, and what should become a separate product.
+
+**Core Focus:**
+- Design scalable workflow structures
+- Build metrics-driven process infrastructure
+- Create strategic architectural blueprints for maximum leverage
+
+---
+
+### 3. **Product Engineering** (Execution & Prototyping)
+*Phase: Tool & System Development*
+
+Engineers execute the strategic blueprint by building custom automation layers, internal software systems, and AI infrastructure pipelines to address the structural friction identified.
+
+**Core Focus:**
+- Develop hands-on tools and custom automation
+- Build internal software systems and integration layers
+- Create AI-powered infrastructure to bridge operational gaps
+
+---
+
+### 4. **Studio** (Venture Development & Productization)
+*Phase: Venture Development & Scale*
+
+Transforms validated operational strategies into standardizable, scalable SaaS products, operational layers, and standalone high-growth ventures.
+
+**Productization Pipeline:**
+- Package repetitive service fixes into modular software products
+- Develop automation dashboards and tailored API integrations
+- Slice proven patterns into venture-backed entities or enterprise SaaS offerings
+
+---
+
+### 5. **Deployment** (Go-to-Market & Client Activation)
+*Phase: Production Rollout & Integration*
+
+Launch engineered solutions into market and client systems. Feed products back to client bases and activate new revenue streams.
+
+**Core Actions:**
+- Deploy to production environments
+- Establish client training and adoption pipelines
+- Create ongoing support and optimization loops
+
+---
+
+### 6. **Expansion** (Intelligence Amplification & Cycle Restart)
+*Phase: Intelligence Multiplication & Ecosystem Growth*
+
+Deployment generates massive operational intelligence. Feed back into consulting to discover new patterns and scale the entire flywheel.
+
+**Core Actions:**
+- Capture new operational intelligence from deployed systems
+- Identify emerging patterns across client base
+- Restart cycle with amplified intelligence
+- Build ecosystem network effects
+
+---
+
+## The Three Interconnected Arms
+
+### **1. Consulting Arm** — *Discovery & Operational Intelligence*
+
+**Mission:** Not a traditional consulting agency. Focuses exclusively on mapping workflows, identifying bottlenecks, and extracting repeatable problem patterns across diverse organizations.
+
+**Core Sub-Functions:**
+- **Operational Audits:** Deep study of communication channels, reporting loops, task pipelines, and coordination failures.
+- **Systems Architecture:** Designing scalable workflows, automated structures, and metrics-driven process infrastructure.
+- **Intelligence Extraction:** Isolating bottlenecks that appear frequently across multiple companies to design modular solutions.
+
+**Approach:** Audit & Extract  
+**Deliverables:** Problem maps, friction reports, repeatable pattern frameworks
+
+---
+
+### **2. Workshops Arm** — *Talent & Execution Pipelines*
+
+**Mission:** Replaces static academic learning with rigorous execution-focused sprint challenges built entirely around real operational problems discovered in Consulting.
+
+**Execution Tracks:**
+- **Venture Operations Track:** Equips builders to analyze operational loopholes, architect complex systems, map workflow trees, and formulate recommendations.
+- **Venture Build Track:** Develops hands-on tools, custom automation layers, internal software systems, and AI infrastructure pipelines to address structural friction.
+- **Talent Engine:** The highest-performing operators are filtered and injected directly into Studio venture construction pipelines.
+
+**Approach:** Learn by Doing  
+**Deliverables:** Trained talent, prototype solutions, foundational systems
+
+---
+
+### **3. Studio Arm** — *Venture Development & Scale*
+
+**Mission:** Transforms validated operational strategies into standardizable, scalable SaaS products, operational layers, and standalone high-growth ventures.
+
+**Productization Pipeline:**
+- **Productization Standard:** Packaging repetitive custom service fixes into modular software products, automation dashboards, and tailored API integrations.
+- **Venture Development:** Slicing proven tooling patterns out as individual, venture-backed entities or enterprise SaaS offerings.
+- **The Deployment Loop:** Feeding products back to client bases, generating massive operational intelligence, and starting the cycle again.
+
+**Approach:** Productize & Scale  
+**Deliverables:** SaaS products, venture entities, scalable operational systems
+
+---
+
 ## Tech Stack & Architecture
 
 This application is built as a strict **Monorepo** to ensure scalability as the studio launches new products (e.g., `apps/web` for the studio site, `apps/credturn` for future SaaS products).
