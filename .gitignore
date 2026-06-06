@@ -1,5 +1,7 @@
 node_modules/
 build/
+!apps/web/src/app/build/
+!apps/web/src/app/build/**
 dist/
 coverage/
 .DS_Store
