@@ -7,52 +7,67 @@ const XIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const TelegramIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <line x1="22" y1="2" x2="11" y2="13"></line>
+    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+  </svg>
+);
+
 export const Footer = () => {
   return (
-    <footer className="w-full bg-zinc-50 dark:bg-black/20 border-t border-black/5 dark:border-white/5 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+    <footer className="w-full bg-transparent border-t border-black/5 mt-auto transition-colors duration-300 font-sans selection:bg-[#6600ff]/10">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
           {/* Brand Section */}
-          <div className="md:col-span-2 space-y-6">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 bg-black dark:bg-zinc-100 text-white dark:text-black flex items-center justify-center font-bold text-lg rounded-lg shadow-md transition-colors duration-300">
-                P
-              </div>
-              <span className="text-zinc-900 dark:text-zinc-100 font-bold tracking-tight text-xl">PIS Labs</span>
-            </div>
-            <p className="text-zinc-500 dark:text-zinc-400 max-w-sm leading-relaxed text-sm">
-              An Applied AI Venture Studio dedicated to researching, building, and distributing scalable digital systems and production-grade software.
+          <div className="md:col-span-1 space-y-4">
+            <h3 className="text-[#111827] font-bold text-xl font-heading tracking-tight">PIS Labs</h3>
+            <p className="text-[#4D4D4D] text-sm leading-relaxed max-w-[240px]">
+              Building the future of operational efficiency through Applied AI.
             </p>
+          </div>
+
+          {/* Services Section */}
+          <div className="space-y-6">
+            <h4 className="text-[#111827] font-bold text-xs uppercase tracking-widest font-heading">SERVICES</h4>
+            <div className="flex flex-col gap-3">
+              <a href="/consulting" className="text-[#4D4D4D] hover:text-[#6600ff] transition-colors text-sm font-medium">Operations Audit</a>
+              <a href="/workshops" className="text-[#4D4D4D] hover:text-[#6600ff] transition-colors text-sm font-medium">Technical Talent</a>
+              <a href="/studio" className="text-[#4D4D4D] hover:text-[#6600ff] transition-colors text-sm font-medium">Venture Building</a>
+            </div>
+          </div>
+
+          {/* Company Section */}
+          <div className="space-y-6">
+            <h4 className="text-[#111827] font-bold text-xs uppercase tracking-widest font-heading">COMPANY</h4>
+            <div className="flex flex-col gap-3">
+              <a href="/#model" className="text-[#4D4D4D] hover:text-[#6600ff] transition-colors text-sm font-medium">About Us</a>
+              <a href="#" className="text-[#4D4D4D] hover:text-[#6600ff] transition-colors text-sm font-medium">Careers</a>
+              <a href="mailto:contact@pis-labs.com" className="text-[#4D4D4D] hover:text-[#6600ff] transition-colors text-sm font-medium">Contact</a>
+            </div>
           </div>
 
           {/* Social Section */}
           <div className="space-y-6">
-            <h4 className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm uppercase tracking-wider">Connect</h4>
-            <div className="flex flex-wrap gap-4">
-              <a href="https://x.com/pislabs" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="p-2 rounded-lg bg-black/5 dark:bg-white/5 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-black/10 dark:hover:bg-white/10 transition-all"><XIcon className="w-4 h-4" /></a>
-              <a href="https://www.linkedin.com/company/pislabs/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-2 rounded-lg bg-black/5 dark:bg-white/5 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-black/10 dark:hover:bg-white/10 transition-all"><Linkedin className="w-4 h-4" /></a>
-              <a href="https://github.com/pis-labs" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="p-2 rounded-lg bg-black/5 dark:bg-white/5 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-black/10 dark:hover:bg-white/10 transition-all"><Github className="w-4 h-4" /></a>
-              <a href="https://www.facebook.com/pislabs" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="p-2 rounded-lg bg-black/5 dark:bg-white/5 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-black/10 dark:hover:bg-white/10 transition-all"><Facebook className="w-4 h-4" /></a>
-              <a href="https://www.instagram.com/pis_labs/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="p-2 rounded-lg bg-black/5 dark:bg-white/5 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-black/10 dark:hover:bg-white/10 transition-all"><Instagram className="w-4 h-4" /></a>
+            <h4 className="text-[#111827] font-bold text-xs uppercase tracking-widest font-heading">SOCIAL</h4>
+            <div className="flex gap-5">
+              <a href="https://www.linkedin.com/company/pislabs/" target="_blank" rel="noopener noreferrer" className="text-[#4D4D4D] hover:text-[#111827] transition-colors"><Linkedin className="w-5 h-5" /></a>
+              <a href="https://x.com/pislabs" target="_blank" rel="noopener noreferrer" className="text-[#4D4D4D] hover:text-[#111827] transition-colors"><XIcon className="w-5 h-5" /></a>
+              <a href="https://www.instagram.com/pis_labs/" target="_blank" rel="noopener noreferrer" className="text-[#4D4D4D] hover:text-[#111827] transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="https://www.facebook.com/pislabs" target="_blank" rel="noopener noreferrer" className="text-[#4D4D4D] hover:text-[#111827] transition-colors"><Facebook className="w-5 h-5" /></a>
+              <a href="https://t.me/pislabs" target="_blank" rel="noopener noreferrer" className="text-[#4D4D4D] hover:text-[#111827] transition-colors"><TelegramIcon className="w-5 h-5" /></a>
             </div>
-          </div>
-
-          {/* Contact Section */}
-          <div className="space-y-6">
-            <h4 className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm uppercase tracking-wider">Inquiries</h4>
-            <a href="mailto:contact@pis-labs.com" className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors text-sm block">contact@pis-labs.com</a>
-            <a href="/booking" className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors text-sm block underline decoration-zinc-300 dark:decoration-zinc-800 underline-offset-4">Schedule a call</a>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-black/5 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-zinc-400 dark:text-zinc-500 text-xs font-medium">
-            &copy; {new Date().getFullYear()} PIS Labs. Engineered for scale.
+        <div className="pt-8 border-t border-black/5 flex flex-col md:flex-row items-center justify-between gap-6">
+          <p className="text-[#4D4D4D] text-[10px] font-bold uppercase tracking-widest">
+            &copy; {new Date().getFullYear()} PIS LABS VENTURE STUDIO. ALL RIGHTS RESERVED.
           </p>
-          <div className="flex items-center gap-8 text-xs font-medium text-zinc-400 dark:text-zinc-500">
-            <a href="/terms" className="hover:text-zinc-900 dark:hover:text-zinc-300 transition-colors">Terms of Service</a>
-            <a href="/privacy" className="hover:text-zinc-900 dark:hover:text-zinc-300 transition-colors">Privacy Policy</a>
+          <div className="flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest text-[#4D4D4D]">
+            <a href="/privacy" className="hover:text-[#6600ff] transition-colors">PRIVACY POLICY</a>
+            <a href="/terms" className="hover:text-[#6600ff] transition-colors">TERMS OF SERVICE</a>
           </div>
         </div>
       </div>
