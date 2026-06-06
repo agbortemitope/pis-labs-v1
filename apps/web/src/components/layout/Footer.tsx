@@ -25,6 +25,20 @@ export const Footer = () => {
             </p>
           </div>
 
+          {/* Sitemap Section */}
+          <div className="space-y-6">
+            <h4 className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm uppercase tracking-wider">Explore</h4>
+            <div className="grid gap-2 text-sm text-zinc-500 dark:text-zinc-400">
+              <a href="/" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Home</a>
+              <a href="/research" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Research</a>
+              <a href="/ventures" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Ventures</a>
+              <a href="/booking" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Booking</a>
+              <a href="/build" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Build</a>
+              <a href="/distribute" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Distribute</a>
+              <a href="/sitemap.xml" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Sitemap</a>
+            </div>
+          </div>
+
           {/* Social Section */}
           <div className="space-y-6">
             <h4 className="text-zinc-900 dark:text-zinc-100 font-semibold text-sm uppercase tracking-wider">Connect</h4>
