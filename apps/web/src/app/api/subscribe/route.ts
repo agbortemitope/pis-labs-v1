@@ -16,6 +16,13 @@ const ratelimit = process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN
     })
   : null;
 
+export async function GET() {
+  return NextResponse.json(
+    { message: 'Use POST to subscribe.' },
+    { status: 405, headers: { Allow: 'POST' } }
+  );
+}
+
 export async function POST(request: Request) {
   try {
     // 1. Rate Limiting Logic
@@ -73,12 +80,14 @@ export async function POST(request: Request) {
 
     // ==========================================
     // DATA LAYER: Send to Google Sheets via Apps Script
-    // Set GOOGLE_SCRIPT_URL in your .env.local file
+    // Uses the provided Google Sheets URL if no script endpoint is configured.
+    // You can override this with GOOGLE_SCRIPT_URL in .env.local.
     // ==========================================
-    const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL;
+    const GOOGLE_SHEETS_URL = process.env.GOOGLE_SCRIPT_URL ||
+      'https://docs.google.com/spreadsheets/d/1rOwvNi1V592cfYR4sfPJExBg9EgBeQR4nxqcpsxZRGE/edit?gid=0#gid=0';
     
-    if (GOOGLE_SCRIPT_URL) {
-      const googleResponse = await fetch(GOOGLE_SCRIPT_URL, {
+    if (GOOGLE_SHEETS_URL) {
+      const googleResponse = await fetch(GOOGLE_SHEETS_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
