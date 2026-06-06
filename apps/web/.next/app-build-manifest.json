@@ -11,31 +11,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/booking/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/booking/page.js"
-    ],
-    "/build/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/build/page.js"
-    ],
-    "/research/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/research/page.js"
-    ],
-    "/distribute/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/distribute/page.js"
-    ],
-    "/ventures/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/ventures/page.js"
-    ],
     "/sitemap.xml/route": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
